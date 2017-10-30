@@ -1,0 +1,42 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>com.sitech.mios.chinamobile</groupId>
+  <artifactId>top-strategy</artifactId>
+  <version>0.0.2-SNAPSHOT</version>
+  
+  <dependencies>
+  <dependency>
+		<groupId>com.sitech.echd.telecom</groupId>
+		<artifactId>peb_core</artifactId>
+		<version>1.2.59-RELEASE</version>
+	</dependency>
+	
+  </dependencies>
+  <distributionManagement>
+		<repository>
+			<id>Releases</id>
+			<name>Releases</name>
+			<url>${nexus.url}/nexus/content/repositories/releases/</url>
+		</repository>
+		<snapshotRepository>
+			<id>Snapshots</id>
+			<name>Snapshots</name>
+			<url>${nexus.url}/nexus/content/repositories/snapshots/</url>
+		</snapshotRepository>
+	</distributionManagement>	
+  <build>
+    <plugins>
+      <plugin>
+        <artifactId>maven-compiler-plugin</artifactId>
+        <configuration>
+          <source>1.6</source>
+          <target>1.6</target>
+        </configuration>
+      </plugin>
+    </plugins>
+  </build>
+  <properties>
+		<nexus.url>http://172.21.10.40:9090</nexus.url>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+	</properties>
+</project>
